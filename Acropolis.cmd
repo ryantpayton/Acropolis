@@ -19,21 +19,23 @@ echo:                               Welcome to Acropolis
 echo:                          developed by -V, GenP Subreddit
 echo:     ________________________________________________________________________ 
 echo:
+echo:         [2] Install       ^|  Download and Install   ^|      (Recommended)
 echo:         [3] Extras        ^|  Individual Options     ^|   (Advanced Users)
 echo:         [4] Recovery      ^|  Restore Defaults       ^|  (Troubleshooting)
 echo:         [5] Discord       ^|  Support                ^|   (Discord Invite)
 echo:         [6] Help          ^|  Acropolis Guide        ^|           (Reddit)
 echo:         ________________________________________________________________
 echo:
+echo:         [1] Main Menu
 echo:         [0] Exit
 echo:     ________________________________________________________________________ 
 echo.
-echo:     Enter a menu option on the keyboard [3,4,5,6,0] :
+echo:     Enter a menu option on the keyboard [1,2,3,4,5,6,0] :
 choice /C:1234560 /N
 set "userChoice=%errorlevel%"
 
 if %userChoice%==1 goto MainMenu
-if %userChoice%==2 goto MainMenu
+if %userChoice%==2 goto DownloadInstall
 if %userChoice%==3 goto ExtraSubmenu
 if %userChoice%==4 goto RestoreDefaultsSubmenu
 if %userChoice%==5 goto DiscordInvite
